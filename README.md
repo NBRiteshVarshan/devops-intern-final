@@ -13,4 +13,8 @@ docker run --rm hello-python
 <br>
 ![CI](https://github.com/nbriteshvarshan/devops-intern-final/actions/workflows/ci.yml/badge.svg)
 <br>
-
+Run your Nomad job:
+nomad job run nomad/DevOps.nomad
+<br>
+Check job status:
+nomad job status DevOps
