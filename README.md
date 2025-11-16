@@ -10,3 +10,7 @@ docker build -t hello-python .
 <br>
 2. Run the Docker container:
 docker run --rm hello-python
+<br>
+![CI](https://github.com/nbriteshvarshan/devops-intern-final/actions/workflows/ci.yml/badge.svg)
+<br>
+
