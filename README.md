@@ -4,3 +4,9 @@ Name - N B Ritesh Varshan
 Date - 16/11/2025
 <br>
 Project Description - An assignment for DevOps Intern.
+<br>
+1. Build the Docker image:
+docker build -t hello-python .
+<br>
+2. Run the Docker container:
+docker run --rm hello-python
