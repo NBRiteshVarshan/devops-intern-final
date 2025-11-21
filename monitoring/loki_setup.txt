@@ -1,0 +1,23 @@
+Grafana Loki Setup Notes
+========================
+
+1. Command to start Loki:
+docker run -d --name=loki -p 3100:3100 grafana/loki:latest
+
+
+2. Forwarding Logs:
+a. Created promtail-config.yaml
+b. Ran Promtail using the command:
+   docker run -d --name=promtail \
+     -v /var/lib/docker/containers:/var/lib/docker/containers:ro \
+     -v /etc/promtail:/etc/promtail \
+     grafana/promtail:latest \
+     -config.file=/etc/promtail/promtail-config.yaml
+
+
+3. Viewing Logs:
+a. Opened Grafana at http://localhost:3000.
+b. Added Loki as a Data Source (URL: http://localhost:3100).
+c. In Explore, ran:
+   {job="dockerlogs"}
+   to query and display log entries from my containers.
